@@ -1,6 +1,6 @@
 local M = {
   is_one_session = false,
-  one_session_file = vim.fn.stdpath("data") .. "/one-session.vim"
+  one_session_file = vim.fn.stdpath('data') .. '/one-session.vim',
 }
 
 function M.load()
@@ -9,7 +9,8 @@ function M.load()
   end
 
   if vim.fn.filereadable(M.one_session_file) == 1 then
-    vim.cmd("source " .. M.one_session_file)
+    package.loaded['treesitter'] = nil
+    vim.schedule(function() vim.api.nvim_command('source ' .. M.one_session_file) end)
     -- vim.notify("one-session loaded", vim.log.levels.INFO, {})
   else
     -- vim.notify("no one-session found", vim.log.levels.INFO, {})
@@ -23,7 +24,7 @@ function M.save()
     return
   end
 
-  vim.cmd("mksession! " .. M.one_session_file)
+  vim.cmd('mksession! ' .. M.one_session_file)
 end
 
 return M

@@ -10,7 +10,7 @@ use { "yyk/one-session.nvim" }
 ```
 
 ## Usage
-When starting vim with no arguments, the one single session will be loaded.
+When starting vim with no arguments, the one single session will be loaded.  
 When existing vim with no arguments, the one single session will be saved.
 
 ## TODO

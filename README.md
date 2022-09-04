@@ -6,7 +6,7 @@ Useful if you keep buffers from multiple projects open and don't want to have a 
 
 ### Packer
 ```lua
-use ("yyk/one-session.nvim")
+use { "yyk/one-session.nvim" }
 ```
 
 ## Usage

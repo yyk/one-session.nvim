@@ -1,5 +1,5 @@
 # one-session.nvim
-A single session manager that has only one session.
+A simple session manager that has only one session.
 Useful if you keep buffers from multiple projects open and don't want to have a session per project because you keep going back and forth between projects.
 
 ## Installation
